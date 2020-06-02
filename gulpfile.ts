@@ -8,9 +8,7 @@ function deleteBuildFolder() {
 
 function transpileTypescript() {
   const tsProject = ts.createProject('tsconfig.json');
-  return tsProject.src()
-    .pipe(tsProject())
-    .pipe(gulp.dest('build'));
+  return tsProject.src().pipe(tsProject()).pipe(gulp.dest('build'));
 }
 
 function deleteBuildGulpfile() {
@@ -18,13 +16,11 @@ function deleteBuildGulpfile() {
 }
 
 function copyStaticFiles() {
-  return gulp.src('src/static/**/*')
-    .pipe(gulp.dest('build/src/static'));
+  return gulp.src('src/static/**/*').pipe(gulp.dest('build/src/static'));
 }
 
 function copyPackageJson() {
-  return gulp.src('package.json')
-    .pipe(gulp.dest('build'));
+  return gulp.src('package.json').pipe(gulp.dest('build'));
 }
 
 export default gulp.series(
