@@ -16,7 +16,7 @@ function deleteBuildGulpfile() {
 }
 
 function copyStaticFiles() {
-  return gulp.src('src/static/**/*').pipe(gulp.dest('build/src/static'));
+  return gulp.src('static/**/*').pipe(gulp.dest('build/static'));
 }
 
 function copyPackageJson() {
