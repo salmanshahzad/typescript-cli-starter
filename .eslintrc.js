@@ -16,7 +16,6 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     'import/extensions': 'off',
-    'import/no-extraneous-dependencies': 'off',
     'linebreak-style': 'off',
     'no-console': 'off',
   },
